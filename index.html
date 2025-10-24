@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Stech Studio</title>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="Untitled-2-01.png" height="100px">
+            <h1>Stech Studio</h1>
+            </div>
+        <nav id="navbar">
+            <ul>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+     <hr>
+   
+    <main id="main">
+        <section id="home">
+            <div class="container">
+                <p>Empowering creativity through design that connects, inspires, and performs.</p>
+            </div>
+            <div class="img-container">
+                <img src="home-img.png">
+            </div>
+        </section>
+        <hr>
+        <section id="about">
+             <div class="img-container">
+                <img src="about-img.png">
+            </div>
+            <div class="container">
+                <h2>About</h2>
+                <p>At Stech Studio, we specialize in creating clean, modern, and responsive websites that bring ideas to life.
+                   Our goal is to design websites that not only look great but also perform seamlessly — helping businesses, brands, and individuals establish a strong online presence.
+                   We focus on user-centered design, mobile optimization, and fast-loading performance, ensuring every project reflects professionalism and creativity.
+                   Whether you need a personal portfolio, business site, or e-commerce platform, Stech Studio delivers functional designs tailored to your vision.</p>
+            </div>
+        </section>
+        <hr>
+        <section id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+ 
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Modern, responsive designs tailored to your brand.</p>
+            </div>
+            <div class="service-card">
+                <h3>Website Redesign</h3>
+                <p>Refresh your website for better performance and UX.</p>
+            </div>
+            <div class="service-card">
+                <h3>SEO Optimization</h3>
+                <p>Boost your visibility and rank higher on search engines.</p>
+            </div>
+            </div>
+            <div class="img-container">
+                <img src="services-img.png">
+            </div>
+        </section>
+        <hr>
+        <section id="projects">
+            <div class="img-container">
+                <img src="projects-img.png">
+            </div>
+            <div class="container">
+                <h2>Our Projects</h2>
+                <p>Explore our diverse portfolio that highlights innovative solutions tailored for our clients.</p>
+                <a href="">View more</a>
+            </div>
+        </section>
+        <hr>
+        <section id="pricing" class="pricing-section">
+            <div class="pricing-heading">
+                <h2>Our Packages</h2>
+                <p>Choose a plan that fits your goals — whether you need a personal website or a full business solution.</p>
+            </div>
+  <div class="pricing-container">
+    <div class="pricing-card basic">
+      <h3>Basic</h3>
+      <p class="price">KES 6,000</p>
+      <ul>
+        <li>1 Page Website</li>
+        <li>Responsive Design</li>
+        <li>Fast Loading Speed</li>
+        <li>Delivery: 2–3 Days</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+
+    <div class="pricing-card standard">
+      <h3>Standard</h3>
+      <p class="price">KES 15,000</p>
+      <ul>
+        <li>Up to 5 Pages</li>
+        <li>Responsive + Modern UI</li>
+        <li>Contact Form Integration</li>
+        <li>Delivery: 5–7 Days</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+
+    <div class="pricing-card premium">
+      <h3>Premium</h3>
+      <p class="price">KES 25,000</p>
+      <ul>
+        <li>Custom Business Website</li>
+        <li>SEO Optimization</li>
+        <li>Maintenance & Updates (1 Month)</li>
+        <li>Delivery: 7–10 Days</li>
+      </ul>
+      <button>Get Started</button>
+    </div>
+  </div>
+</section>
+<hr>
+        <section id="contact">
+                <h2 id="contact-heading">Contact Us</h2>
+                <p>Reach out to discuss your UX/UI needs or to start a project. 
+                    We're here to help you create impactful digital experiences.</p>
+                    <form id="contact-form" action="nziokajohn360@gmail.com">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" required name="name">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required name="email">
+                        <label for="message">Message</label>
+                        <textarea id="message" type="text" required name="message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+        </section>
+
+    </main>
+    <hr>
+    <footer id="footer">
+        <p>&copy; <span id="year"></span> Stech Studio.<strong> | Empowering digital innovation.</strong></p>
+    </footer>
+    
+</body>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</html>

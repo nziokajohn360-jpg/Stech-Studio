@@ -1,0 +1,368 @@
+html{
+    font-size: 16px;
+}
+
+html,body{
+    margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    zoom:1;
+    transform: none;
+    width:100%;
+}
+
+body, p, a, li{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+header{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #007BFF;
+    margin: 0;
+    padding:0 40px;
+    box-sizing:border-box;
+    z-index: 1000;
+    max-height: 100px;
+    position: fixed;
+}
+
+h1, h2, h3, h4{
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+hr{
+    margin:0;
+    color:white;
+    outline: none;
+    border: none;
+    height: 2px;
+}
+
+#navbar ul{
+    display: flex;
+    gap:20px;
+    list-style-type: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:white;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #222831;
+    cursor: pointer;
+}
+
+#main{
+    padding:0;
+    margin-top: 100px;
+}
+
+section{
+    display: flex;
+    color:white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about,#services,#projects{
+    height:35rem;
+}
+
+#home{
+    height:21.875rem;
+}
+
+.container{
+    width: 40%;
+}
+
+.container p{
+    letter-spacing: 0.2px;
+    text-align: justify;
+}
+
+.container a{
+    color:white;
+    background-color:#007BFF;
+    width:100px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.container a:hover{
+    background-color: #00FF88;
+}
+
+h2{
+    text-align:center;
+    color: #00FF88;
+}
+
+h3{
+    color:#00FF88;
+}
+
+
+#home{
+    background-color: #222831;
+}
+
+#home p{
+    font-size: 1.5rem;
+}
+
+.img-container{
+    height:300px;
+    width:400px;
+}
+
+.img-container img{
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
+
+#about{
+    background-color: #222831;
+}
+
+#services{
+    background-color: #007BFF;
+}
+
+#projects{
+    background-color: #222831;
+}
+
+#contact{
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 30px;
+    color:black !important;
+}
+
+#contact p{
+    margin-top:-10px;
+}
+
+#contact-form{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-heading{
+    color:black;
+}
+
+label{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+form button{
+    margin-top: 20px;
+    width:90px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border:none;
+    background-color: #007BFF;
+    font-weight: normal;
+    color: white;
+    padding: 7px;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color: #00FF88;
+    cursor: pointer;
+}
+
+label[for="email"]::after{
+    content: '(required)';
+    opacity:0.7;
+    margin-left:5px;
+}
+
+input{
+    border-radius:5px;
+    height:35px;
+    outline: none;
+    border:1px solid #222831;
+}
+
+textarea{
+    height:55px;
+    border:1px solid #222831;
+    border-radius:5px;
+    outline:none;
+}
+
+input:focus, textarea:focus{
+    border:2px solid #007BFF;
+}
+
+#footer{
+    background-color: #222831;
+    text-align: center;
+    color: #d0d0d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer strong{
+    color:#007BFF;
+}
+
+.pricing-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  flex-direction:column;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 40px;
+  flex-direction: row;
+}
+
+.pricing-card {
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  padding: 30px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card h3 {
+  color: #007BFF; /* electric blue */
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.pricing-card li {
+  margin: 10px 0;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.pricing-card button {
+  margin-top: 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.25rem;
+}
+
+.pricing-card button:hover {
+  background-color: #00FF88;
+}
+
+@media only screen and (max-width:800px){
+    header{
+        justify-content: center;
+    }
+
+    #navbar{
+        display: none;
+    }
+
+    section{
+        flex-direction: column;
+        max-width:100%;
+    }
+
+    #home{
+        height:35rem;
+    }
+
+    #about,#projects,#services{
+    height:50rem;
+    }
+
+    #about,#projects{
+        flex-direction: column-reverse;
+    }
+
+    .container{
+        width:80%;
+    }
+
+    #contact-form{
+        width:70%;
+    }
+
+    .img-container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .pricing-card{
+        width:70%;
+    }
+}
+
+@media only screen and (max-width:450px){
+    #about,#services{
+        height:54rem;
+    }
+    #home p{
+        font-size:1.4rem;
+    }
+    header{
+        justify-content: center;
+    }
+}
+
+.logo-section{
+    display: flex;
+    flex-direction: row;
+    color:#222831;
+}
