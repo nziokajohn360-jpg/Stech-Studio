@@ -288,19 +288,21 @@ input:focus, textarea:focus{
   padding-bottom: 8px;
 }
 
-.pricing-card button {
+.pricing-card .whatsapp-link {
   margin-top: 20px;
   background-color: #007BFF;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   font-size: 1.25rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.pricing-card button:hover {
+.pricing-card .whatsapp-link:hover {
   background-color: #00FF88;
 }
 
@@ -365,4 +367,50 @@ input:focus, textarea:focus{
     display: flex;
     flex-direction: row;
     color:#222831;
+}
+
+#projects-container{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #222831;
+}
+
+.project-card{
+    background-color: #007BFF;
+    width:250px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.project-card h3,p,a{
+    margin-left: 10px;
+}
+
+.project-card img{
+    object-fit: cover;
+    width:100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-link{
+    background-color:#00FF88;
+    padding:8px;
+    border-radius:10px;
+    text-decoration: none;
+    text-align: center;
+    opacity:0.9;
+    color:black;
+}
+
+.project-link:hover{
+    opacity:1;
+    color:white;
 }
