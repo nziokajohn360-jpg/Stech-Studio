@@ -1,3 +1,10 @@
+:root{
+    --primary-color:#222831;
+    --accent-color:#007bff;
+    --text-color:white;
+    --card-color:#2b2b2b;
+}
+
 html{
     font-size: 16px;
 }
@@ -22,17 +29,29 @@ header{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
-    background-color: #007BFF;
+    color: var(--text-color);
+    background-color: var(--accent-color);
     margin: 0;
     padding:0 40px;
     box-sizing:border-box;
     z-index: 1000;
-    max-height: 100px;
+    height: 70px;
     position: fixed;
 }
 
-h1, h2, h3, h4{
+h1{
+    font-size: 30px;
+    margin-left:10px;
+    font-weight: 400;
+}
+
+.logo{
+    font-size:40px;
+    font-weight: 400;
+   font-family: "Poppins",sans-serif;
+}
+
+h2, h3, h4{
     font-family: "Poppins",sans-serif;
     letter-spacing: 0.5px;
     font-weight: 600;
@@ -40,10 +59,10 @@ h1, h2, h3, h4{
 
 hr{
     margin:0;
-    color:white;
+    color:grey;
     outline: none;
     border: none;
-    height: 2px;
+    height: 1px;
 }
 
 #navbar ul{
@@ -54,13 +73,13 @@ hr{
 
 .nav-link{
     text-decoration: none;
-    font-size: 1.5rem;
-    color:white;
+    font-size: 1.3rem;
+    color:var(--text-color);
     transition: 0.3s;
 }
 
 .nav-link:hover{
-    color: #222831;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -71,17 +90,18 @@ hr{
 
 section{
     display: flex;
-    color:white;
+    color:var(--text-color);
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--primary-color);
+}
+
+#about{
+    margin-top:-40px;
 }
 
 #about,#services,#projects{
     height:35rem;
-}
-
-#home{
-    height:21.875rem;
 }
 
 .container{
@@ -94,8 +114,8 @@ section{
 }
 
 .container a{
-    color:white;
-    background-color:#007BFF;
+    color:var(--text-color);
+    background-color:var(--accent-color);
     width:100px;
     display: inline-block;
     text-align: center;
@@ -118,15 +138,6 @@ h3{
     color:#00FF88;
 }
 
-
-#home{
-    background-color: #222831;
-}
-
-#home p{
-    font-size: 1.5rem;
-}
-
 .img-container{
     height:300px;
     width:400px;
@@ -136,18 +147,6 @@ h3{
    object-fit: cover;
    width: 100%;
    height: 100%;
-}
-
-#about{
-    background-color: #222831;
-}
-
-#services{
-    background-color: #007BFF;
-}
-
-#projects{
-    background-color: #222831;
 }
 
 #contact{
@@ -187,9 +186,9 @@ form button{
     font-size: 1.5rem;
     border-radius: 20px;
     border:none;
-    background-color: #007BFF;
+    background-color: var(--accent-color);
     font-weight: normal;
-    color: white;
+    color: var(--text-color);
     padding: 7px;
     transition: 0.3s;
 }
@@ -209,37 +208,53 @@ input{
     border-radius:5px;
     height:35px;
     outline: none;
-    border:1px solid #222831;
+    border:1px solid var(--primary-color);
 }
 
 textarea{
     height:55px;
-    border:1px solid #222831;
+    border:1px solid var(--primary-color);
     border-radius:5px;
     outline:none;
 }
 
 input:focus, textarea:focus{
-    border:2px solid #007BFF;
+    border:2px solid var(--accent-color);
 }
 
 #footer{
-    background-color: #222831;
+    background-color: var(--primary-color);
     text-align: center;
     color: #d0d0d0;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding:20px;
 }
 
 #footer strong{
-    color:#007BFF;
+    color:var(--accent-color);
+}
+
+.footer-icons i{
+    color: var(--accent-color);
+    font-size:30px;
+    transition:transform 0.3s ease;
+}
+
+.footer-icons i:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.footer-icons p{
+    font-size: 20px;
 }
 
 .pricing-section {
   text-align: center;
   padding: 60px 20px;
-  background-color: #007BFF;
   color: #fff;
   flex-direction:column;
 }
@@ -254,7 +269,7 @@ input:focus, textarea:focus{
 }
 
 .pricing-card {
-  background-color: #2b2b2b;
+  background-color: var(--card-color);
   border-radius: 15px;
   padding: 30px;
   width: 280px;
@@ -266,7 +281,7 @@ input:focus, textarea:focus{
 }
 
 .pricing-card h3 {
-  color: #007BFF; /* electric blue */
+  color: var(--accent-color); /* electric blue */
   margin-bottom: 10px;
 }
 
@@ -288,9 +303,9 @@ input:focus, textarea:focus{
   padding-bottom: 8px;
 }
 
-.pricing-card .whatsapp-link {
+.btn {
   margin-top: 20px;
-  background-color: #007BFF;
+  background-color: var(--accent-color);
   color: #fff;
   border: none;
   padding: 5px 20px;
@@ -302,7 +317,7 @@ input:focus, textarea:focus{
   display: inline-block;
 }
 
-.pricing-card .whatsapp-link:hover {
+.btn:hover {
   background-color: #00FF88;
 }
 
@@ -318,10 +333,6 @@ input:focus, textarea:focus{
     section{
         flex-direction: column;
         max-width:100%;
-    }
-
-    #home{
-        height:35rem;
     }
 
     #about,#projects,#services{
@@ -353,11 +364,9 @@ input:focus, textarea:focus{
 
 @media only screen and (max-width:450px){
     #about,#services{
-        height:54rem;
+        height:60rem;
     }
-    #home p{
-        font-size:1.4rem;
-    }
+
     header{
         justify-content: center;
     }
@@ -366,7 +375,9 @@ input:focus, textarea:focus{
 .logo-section{
     display: flex;
     flex-direction: row;
-    color:#222831;
+    color:var(--text-color);
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #projects-container{
@@ -375,17 +386,25 @@ input:focus, textarea:focus{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #222831;
+    background-color: var(--primary-color);
 }
 
 .project-card{
-    background-color: #007BFF;
-    width:250px;
+    background-color: var(--card-color);
+    width:280px;
     border-radius: 10px;
-    box-sizing: border-box;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
     padding-bottom: 15px;
+    color:var(--text-color);
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+}
+
+.project-card h3{
+    color:var(--accent-color);
 }
 
 .project-card h3,p,a{
@@ -401,16 +420,13 @@ input:focus, textarea:focus{
 }
 
 .project-link{
-    background-color:#00FF88;
-    padding:8px;
-    border-radius:10px;
-    text-decoration: none;
-    text-align: center;
-    opacity:0.9;
-    color:black;
+    display:block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
 }
 
-.project-link:hover{
-    opacity:1;
-    color:white;
+.service-card h3{
+    color:var(--accent-color);
 }
