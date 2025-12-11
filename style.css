@@ -382,11 +382,12 @@ input:focus, textarea:focus{
 
 #projects-container{
     display: flex;
-    gap:20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--primary-color);
+    gap: 2rem;
+    flex-direction: row;
 }
 
 .project-card{
@@ -397,6 +398,7 @@ input:focus, textarea:focus{
     margin-bottom: 20px;
     padding-bottom: 15px;
     color:var(--text-color);
+    height: 550px;
 }
 
 .project-card:hover{
