@@ -344,6 +344,9 @@ input:focus, textarea:focus{
     #about,#services{
         height:60rem;
     }
+    .project-card{
+        width:75%;
+    }
 }
 
 .logo-section{
