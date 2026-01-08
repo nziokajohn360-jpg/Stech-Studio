@@ -345,7 +345,7 @@ input:focus, textarea:focus{
         height:60rem;
     }
     .project-card{
-        width:75%;
+        width:90% !important;
     }
 }
 
