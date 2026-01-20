@@ -15,7 +15,8 @@
         <div class="logo-section">
             <p class="logo">{S}</p>
             <h1>Stech Studio</h1>
-            </div>
+        </div>
+
         <nav id="navbar">
             <ul>
                 <li><a class="nav-link" href="#about">Home</a></li>
@@ -24,9 +25,30 @@
                 <li><a class="nav-link" href="#projects">Projects</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-            
         </nav>
-        <img src="moon.png" id="icon">
+        
+
+        <div class="menu">
+            <img src="moon.png" id="icon">
+       
+
+        <!--side menu on mobile devices-->
+        <button class="menu-toggle" id="menuToggle">
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+              <div class="hamburger-line"></div>
+        </button>
+         </div>
+        <div class="side-menu" id="sideMenu">
+            <ul class="menu-items">
+                <li><a  href="#about">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a  href="#projects">Projects</a></li>
+                <li><a  href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
     </header>
     <!--END OF HEADER SECTION-->
    
@@ -166,7 +188,6 @@
         </section>
         
         <!------------------------------------------------------------------------------------------------------->
-
 
         <section id="projects-container">
 
@@ -320,9 +341,8 @@
     </footer>
     <!--END OF FOOTER SECTION-->
     
+    <script src="script.js"></script>
 </body>
 
-<script src="script.js">
-    
-</script>
+
 </html>
