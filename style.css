@@ -449,7 +449,7 @@ input:focus, textarea:focus{
     transform: translateX(5px);
 }
 
-/*MISSION AND VISON STYLING*/
+/*MISSION AND VISION STYLING*/
 
 .mission-vision {
   padding: 4rem 2rem;
@@ -821,3 +821,7 @@ input:focus, textarea:focus{
    .menu-items a:hover:before {
             left: 0;
         }     
+
+.service-card i{
+    margin-left:10px;
+}
