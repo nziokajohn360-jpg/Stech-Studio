@@ -1,55 +1,64 @@
+// ── Theme Toggle ──────────────────────────────────────────
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon   = document.getElementById('themeIcon');
+const html        = document.documentElement;
 
-// script.js
-
-// Toggle light and dark theme
-
-function toggleTheme() {
-const icon = document.getElementById("icon");
-icon.onclick = function() {
-    document.body.classList.toggle("light-theme");
-    if(document.body.classList.contains("light-theme")){
-        icon.src = "sun.png";
-    } else {
-        icon.src = "moon.png";
-    }
-}
+function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    themeIcon.className = theme === 'dark' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+    localStorage.setItem('theme', theme);
 }
 
-toggleTheme();
+// Load saved theme
+applyTheme(localStorage.getItem('theme') || 'dark');
+
+themeToggle.addEventListener('click', () => {
+    applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
 
 
-// Set current year in footer
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Menu toggle for mobile view
+// ── Mobile Menu ────────────────────────────────────────────
 const menuToggle = document.getElementById('menuToggle');
-        const sideMenu = document.getElementById('sideMenu');
+const sideMenu   = document.getElementById('sideMenu');
 
-        // Toggle menu when menu button is clicked
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            sideMenu.classList.toggle('active');
-            
-            // Prevent body scrolling when menu is open
-            document.body.style.overflow = sideMenu.classList.contains('active') ? 'hidden' : '';
-        });
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    sideMenu.classList.toggle('active');
+    document.body.style.overflow = sideMenu.classList.contains('active') ? 'hidden' : '';
+});
 
-        // Close menu when clicking on a menu item
-        const menuItems = document.querySelectorAll('.menu-items a');
-        menuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                sideMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
+document.querySelectorAll('.menu-items a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        sideMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
 
-        // Close menu when clicking outside the menu
-        sideMenu.addEventListener('click', (e) => {
-            if (e.target === sideMenu) {
-                menuToggle.classList.remove('active');
-                sideMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
+sideMenu.addEventListener('click', e => {
+    if (e.target === sideMenu) {
+        menuToggle.classList.remove('active');
+        sideMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
 
+
+// ── Header scroll shadow ───────────────────────────────────
+window.addEventListener('scroll', () => {
+    document.getElementById('header').style.boxShadow =
+        window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.3)' : 'none';
+});
+
+
+// ── FAQ Accordion ──────────────────────────────────────────
+function toggleFaq(questionEl) {
+    const item = questionEl.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+
+// ── Footer Year ────────────────────────────────────────────
+document.getElementById('year').textContent = new Date().getFullYear();
