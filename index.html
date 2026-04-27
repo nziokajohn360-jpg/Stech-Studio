@@ -1,404 +1,517 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Stech Studio</title>
 </head>
 <body>
 
-    <!--HEADER SECTION-->
-    <header>
+    <!-- HEADER -->
+    <header id="header">
         <div class="logo-section">
-            <p class="logo">{S}</p>
-            <h1>Stech Studio</h1>
+            <span class="logo">{S}</span>
+            <span class="brand-name">Stech Studio</span>
         </div>
 
         <nav id="navbar">
-            <ul>
-                <li><a class="nav-link" href="#about">Home</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#services">Services</a></li>
-                <li><a class="nav-link" href="#projects">Projects</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
+            <a class="nav-link" href="#contact">Contact</a>
         </nav>
-        
 
-        <div class="menu">
-            <img src="moon.png" id="icon">
-       
+        <div class="header-actions">
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="toggle-track">
+                    <span class="toggle-thumb">
+                        <i class="fa-solid fa-moon" id="themeIcon"></i>
+                    </span>
+                </span>
+            </button>
 
-        <!--side menu on mobile devices-->
-        <button class="menu-toggle" id="menuToggle">
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
-        </button>
-         </div>
+            <!-- Hamburger -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+        </div>
+
+        <!-- Mobile Side Menu -->
         <div class="side-menu" id="sideMenu">
             <ul class="menu-items">
-                <li><a  href="#about">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a  href="#projects">Projects</a></li>
-                <li><a  href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-        
     </header>
-    <!--END OF HEADER SECTION-->
-   
+
     <main id="main">
 
-        <!--HERO SECTION-->
-        <section class="hero">
-            <div class="container">
-                
-                <p class="hero-title">
-                Websites That Turn Visitors Into <span>Paying Customers</span>
-                </p>
-
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Web Design Studio — Kenya</div>
+                <h1 class="hero-title">
+                    Websites That Turn<br>Visitors Into
+                    <span class="accent-text"> Paying Customers</span>
+                </h1>
                 <p class="hero-subtext">
-                We design fast, strategic, and conversion-focused websites 
-                that help businesses grow online and generate real results.
+                    We design fast, strategic, and conversion-focused websites
+                    that help businesses grow online and generate real results.
                 </p>
-
                 <div class="hero-buttons">
-                <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" target="_blank" class="btn primary-btn">Get a Free Website Audit</a>
-                <a href="#projects" class="btn secondary-btn">View Our Work</a>
+                    <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> Get a Free Audit
+                    </a>
+                    <a href="#projects" class="btn btn-outline">View Our Work</a>
                 </div>
-
                 <div class="hero-features">
-                <div>⚡ Fast & Mobile Optimized</div>
-                <div>🎯 Built for Conversions</div>
-                <div>🔍 SEO-Ready Structure</div>
+                    <span>⚡ Fast & Mobile Optimized</span>
+                    <span>🎯 Built for Conversions</span>
+                    <span>🔍 SEO-Ready Structure</span>
                 </div>
-
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card floating">
+                    <div class="card-dot green"></div>
+                    <div class="card-line w80"></div>
+                    <div class="card-line w60"></div>
+                    <div class="card-line w70"></div>
+                    <div class="card-stats">
+                        <div class="stat"><span class="stat-num">98%</span><span>Satisfaction</span></div>
+                        <div class="stat"><span class="stat-num">50+</span><span>Projects</span></div>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-        <!--END OF HERO SECTION-->
-
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--ABOUT SECTION-->
-        <section id="about">
-             <div class="img-container">
-                <img src="images/about-img.png">
+        <!-- ABOUT -->
+        <section id="about" class="about-section">
+            <div class="about-image-wrap">
+                <div class="about-img-bg"></div>
+                <img src="images/about-img.png" alt="About Stech Studio" class="about-img">
+                <div class="about-badge">
+                    <i class="fa-solid fa-award"></i>
+                    <span>2+ Years Experience</span>
+                </div>
             </div>
-            <div class="about-container">
-                <h2>About</h2>
+            <div class="about-content">
+                <p class="section-label">WHO WE ARE</p>
+                <h2>Building Digital Experiences <span class="accent-text">That Matter</span></h2>
                 <p>At Stech Studio, we specialize in creating clean, modern, and responsive websites that bring ideas to life.
-                   Our goal is to design websites that not only look great but also perform seamlessly; helping businesses, brands, and individuals establish a strong online presence.
-                   We focus on user-centered design, mobile optimization, and fast-loading performance, ensuring every project reflects professionalism and creativity.
-                   Whether you need a personal portfolio, business site, or e-commerce platform, Stech Studio delivers functional designs tailored to your vision.</p>
+                    Our goal is to design websites that not only look great but also perform seamlessly — helping businesses,
+                    brands, and individuals establish a strong online presence.</p>
+                <p>We focus on user-centered design, mobile optimization, and fast-loading performance, ensuring every
+                    project reflects professionalism and creativity.</p>
+                <div class="about-stats">
+                    <div class="astat"><span>50+</span><p>Projects Done</p></div>
+                    <div class="astat"><span>98%</span><p>Happy Clients</p></div>
+                    <div class="astat"><span>24/7</span><p>Support</p></div>
+                </div>
             </div>
         </section>
-        <!--END OF ABOUT SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--MISSION AND VISION SECTION-->
+        <!-- MISSION & VISION -->
         <section class="mission-vision" id="mission">
-                <h2 class="section-title">Our Mission & Vision</h2>
-
-                <div class="mv-container">
-                    <div class="mv-card">
+            <p class="section-label center">OUR PURPOSE</p>
+            <h2 class="section-title">Mission & <span class="accent-text">Vision</span></h2>
+            <div class="mv-container">
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fa-solid fa-rocket"></i></div>
                     <h3>Our Mission</h3>
-                    <p>
-                        To design and develop modern, high-quality digital solutions
-                        that help businesses grow, connect with their audience,
-                        and succeed online.
-                    </p>
-                    </div>
-
-                    <div class="mv-card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To become a trusted digital partner known for creativity,
-                        innovation, and delivering reliable web solutions
-                        across different industries.
-                    </p>
-                    </div>
+                    <p>To design and develop modern, high-quality digital solutions that help businesses grow, connect with their audience, and succeed online.</p>
                 </div>
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To become a trusted digital partner known for creativity, innovation, and delivering reliable web solutions across different industries.</p>
+                </div>
+            </div>
         </section>
-        <!--END OF MISSION AND VISION SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
+        <!-- HOW WE WORK -->
+        <section class="process-section" id="process">
+            <p class="section-label center">OUR PROCESS</p>
+            <h2 class="section-title">How We <span class="accent-text">Work</span></h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">01</div>
+                    <h3>Discovery</h3>
+                    <p>We listen to understand your goals, target audience, and business needs.</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="step-num">02</div>
+                    <h3>Design</h3>
+                    <p>We craft a modern, brand-aligned design tailored specifically for you.</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="step-num">03</div>
+                    <h3>Build</h3>
+                    <p>We develop your site with clean code, speed, and mobile-first in mind.</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="process-step">
+                    <div class="step-num">04</div>
+                    <h3>Launch</h3>
+                    <p>We deliver, test, and support you after going live — no disappearing acts.</p>
+                </div>
+            </div>
+        </section>
 
-        <!--WHY CHOOSE US SECTION-->
+        <!-- WHY CHOOSE US -->
         <section class="why-choose-us" id="why-us">
-            <h2 class="section-title">Why Choose Us</h2>
-
+            <p class="section-label center">WHY US</p>
+            <h2 class="section-title">Why Choose <span class="accent-text">Stech Studio</span></h2>
             <div class="why-grid">
                 <div class="why-card">
-                <h3><i class="fa-solid fa-user-check"></i> Client-Focused Approach</h3>
-                <p>
-                    We take time to understand your goals and create solutions
-                    tailored to your business needs.
-                </p>
+                    <i class="fa-solid fa-user-check why-icon"></i>
+                    <h3>Client-Focused</h3>
+                    <p>We take time to understand your goals and create solutions tailored to your business needs.</p>
                 </div>
-
                 <div class="why-card">
-                <h3><i class="fa-solid fa-mobile-screen-button"></i> Modern & Responsive Design</h3>
-                <p>
-                    Every website is designed to look great and perform well
-                    on all devices.
-                </p>
+                    <i class="fa-solid fa-mobile-screen-button why-icon"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Every website looks great and performs well on all devices, from phones to desktops.</p>
                 </div>
-
                 <div class="why-card">
-                <h3><i class="fa-solid fa-shield-halved"></i> Reliable & Transparent</h3>
-                <p>
-                    Clear communication, realistic timelines,
-                    and honest pricing—no surprises.
-                </p>
+                    <i class="fa-solid fa-shield-halved why-icon"></i>
+                    <h3>Transparent & Honest</h3>
+                    <p>Clear communication, realistic timelines, and honest pricing — no surprises.</p>
                 </div>
-
                 <div class="why-card">
-                <h3><i class="fa-solid fa-headset"></i> Continuous Support</h3>
-                <p>
-                    We provide post-launch support and guidance
-                    to keep your website running smoothly.
-                </p>
+                    <i class="fa-solid fa-headset why-icon"></i>
+                    <h3>Ongoing Support</h3>
+                    <p>We provide post-launch support and guidance to keep your website running smoothly.</p>
                 </div>
             </div>
         </section>
-        <!--END OF WHY CHOOSE US SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--SERVICES SECTION-->
-        <section id="services">
-            <div class="services-container">
-                <h2>Our Services</h2>
- 
-            <div class="service-card">
-                <h3><i class="fa-solid fa-palette"></i>  Web Design</h3>
-                <p>Modern, responsive designs tailored to your brand.</p>
+        <!-- SERVICES -->
+        <section id="services" class="services-section">
+            <div class="services-text">
+                <p class="section-label">WHAT WE DO</p>
+                <h2>Our <span class="accent-text">Services</span></h2>
+                <p class="services-desc">From brand-new websites to redesigns and SEO — we offer everything you need to grow online.</p>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div>
+                        <h3>Web Design</h3>
+                        <p>Modern, responsive designs tailored to your brand identity.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <div>
+                        <h3>Website Redesign</h3>
+                        <p>Refresh your existing website for better performance and UX.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <div>
+                        <h3>SEO Optimization</h3>
+                        <p>Boost your visibility and rank higher on search engines.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-arrows-rotate"></i>  Website Redesign</h3>
-                <p>Refresh your website for better performance and UX.</p>
-            </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-magnifying-glass-chart"></i> SEO Optimization</h3>
-                <p>Boost your visibility and rank higher on search engines.</p>
-            </div>
-            </div>
-            <div class="img-container">
-                <img src="images/services-img.png">
+            <div class="services-image-wrap">
+                <div class="services-img-bg"></div>
+                <img src="images/services-img.png" alt="Our Services" class="services-img">
             </div>
         </section>
+
+        <!-- SKILLS -->
         <section class="skills" id="skills">
-            <h2 class="section-title">Skills & Tools</h2>
-
+            <p class="section-label center">TECH STACK</p>
+            <h2 class="section-title">Skills & <span class="accent-text">Tools</span></h2>
             <div class="skills-grid">
-                <div class="skill-card">HTML5</div>
-                <div class="skill-card">CSS3</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Git & GitHub</div>
-                <div class="skill-card">Responsive Design</div>
-                <div class="skill-card">UI/UX Design</div>
+                <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+                <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+                <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                <div class="skill-card"><i class="fa-brands fa-github"></i><span>Git & GitHub</span></div>
+                <div class="skill-card"><i class="fa-solid fa-mobile-screen"></i><span>Responsive</span></div>
+                <div class="skill-card"><i class="fa-solid fa-pencil-ruler"></i><span>UI/UX Design</span></div>
             </div>
         </section>
-        <!--END OF SERVICES SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--PROJECTS SECTION-->
-        <section id="projects">
-            <div class="container">
-                <h2>Our Projects</h2>
-                <p>Explore our diverse portfolio that highlights innovative solutions tailored for our clients.</p>
+        <!-- PROJECTS -->
+        <section id="projects" class="projects-section">
+            <p class="section-label center">PORTFOLIO</p>
+            <h2 class="section-title">Our <span class="accent-text">Projects</span></h2>
+            <p class="section-sub">Explore our diverse portfolio that highlights innovative solutions tailored for our clients.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="images/Screenshot (544).png" alt="Cake Business Website">
+                        <div class="project-overlay">
+                            <a href="https://nziokajohn360-jpg.github.io/dorcas-delicacies/" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cake Business Website</h3>
+                        <p>A responsive cake shop with WhatsApp order integration and organized pricing.</p>
+                        <div class="project-tags"><span>Web Design</span><span>E-Commerce</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="images/Screenshot (542).png" alt="MC Website">
+                        <div class="project-overlay">
+                            <a href="https://nziokajohn360-jpg.github.io/mc/" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Master of Ceremony Website</h3>
+                        <p>A visual-heavy portfolio site for an event host with optimized media assets.</p>
+                        <div class="project-tags"><span>Portfolio</span><span>Events</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="images/Screenshot (543).png" alt="Event Planner Website">
+                        <div class="project-overlay">
+                            <a href="https://nziokajohn360-jpg.github.io/eventplanner/" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Event Planner Website</h3>
+                        <p>A sleek, visual-first website showcasing services and galleries with modern UX.</p>
+                        <div class="project-tags"><span>Web Design</span><span>UX</span></div>
+                    </div>
+                </div>
             </div>
         </section>
-        
-        <!------------------------------------------------------------------------------------------------------->
 
-        <section id="projects-container">
-
-            <div class="project-card">
-                <img src="images/Screenshot (544).png" alt="cake business website">
-                <h3>Cake Business Website</h3>
-                <p>A responsive cake shop website featuring WhatsApp order integration and organized pricing for all cake types.</p>
-                <a href="https://nziokajohn360-jpg.github.io/dorcas-delicacies/" target="_blank" class="project-link btn">View Project</a>
-            </div>
-
-             <div class="project-card">
-                <img src="images/Screenshot (542).png" alt="cake business website">
-                <h3>An Master of Ceremony Website</h3>
-                <p> A visual-heavy portfolio site for an event host.Engineered for high performance with optimized media assets.</p>
-                <a href="https://nziokajohn360-jpg.github.io/mc/" target="_blank" class="project-link btn">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/Screenshot (543).png" alt="cake business website">
-                <h3>An Event Planner Website</h3>
-                <p>A sleek, visual-first website showcasing services and galleries. Built to increase inquiries through a modern UX and responsive layout.</p>
-                <a href="https://nziokajohn360-jpg.github.io/eventplanner/" target="_blank" class="project-link btn">View Project</a>
-            </div>
-
-
-
-            <!--<div class="project-card">
-                <img src="images/cafe-aroma.jpg" alt="Project 2">
-                <h3>Coffee Shop  Website</h3>
-                <p>A responsive coffee shop website showcasing a minimal menu and a simple contact form for customer inquiries.</p>
-                <a href="https://nziokajohn360-jpg.github.io/cafe-aroma/" target="_blank" class="project-link btn">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <img src="images/househelpkonnect.png" alt="Project 2">
-                <h3>HouseHelp Konnect</h3>
-                <p>Househelp Konnect is a web platform that connects househelps and employers locally.</p>
-                <a href="https://househelpkonnect.vercel.app/" target="_blank" class="project-link btn">View Project</a>
-            </div>
-        -->
-            
-         </section>
-
-            <!--END OF PROJECTS SECTION-->
-
-            <!------------------------------------------------------------------------------------------------------->
-
-            <!--TESTIMONIALS SECTION-->
-
+        <!-- TESTIMONIALS -->
         <section class="testimonials" id="testimonials">
-            <h2 class="section-title">What Clients Say</h2>
-
+            <p class="section-label center">SOCIAL PROOF</p>
+            <h2 class="section-title">What Clients <span class="accent-text">Say</span></h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                <p>
-                    "John delivered an amazing website that exceeded our expectations.
-                    Highly professional and creative."
-                </p>
-                <h4>— David</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>"Stech Studio delivered an amazing website that exceeded our expectations. Highly professional and creative."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div><strong>David</strong><span>Business Owner</span></div>
+                    </div>
                 </div>
-
                 <div class="testimonial-card">
-                <p>
-                    "Fast delivery, clean design, and great communication.
-                    I highly recommend Stech Studio."
-                </p>
-                <h4>— Grace</h4>
+                    <div class="stars">★★★★★</div>
+                    <p>"Fast delivery, clean design, and great communication. I highly recommend Stech Studio."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">G</div>
+                        <div><strong>Grace</strong><span>Entrepreneur</span></div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!--END OF TESTIMONIALS SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--PRICING SECTION-->
+        <!-- PRICING -->
         <section id="pricing" class="pricing-section">
-            <div class="pricing-heading">
-                <h2>Our Packages</h2>
-                <p>Choose a plan that fits your goals, whether you need a personal website or a full business solution.</p>
-                </div>
+            <p class="section-label center">PACKAGES</p>
+            <h2 class="section-title">Our <span class="accent-text">Pricing</span></h2>
+            <p class="section-sub">Choose a plan that fits your goals — personal site or full business solution.</p>
             <div class="pricing-container">
-                <div class="pricing-card basic">
-                <h3>Basic</h3>
-                <p class="price">KES 10,000</p>
-                <ul>
-                    <li>1 Page Website</li>
-                    <li>Responsive Design</li>
-                    <li>Fast Loading Speed</li>
-                    <li>Delivery: 2–3 Days</li>
-                </ul>
-                <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="whatsapp-link btn" target="_blank">Get Started</a>
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">KES 10,000</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> 1 Page Website</li>
+                        <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                        <li><i class="fa-solid fa-check"></i> Fast Loading Speed</li>
+                        <li><i class="fa-solid fa-check"></i> Delivery: 2–3 Days</li>
+                    </ul>
+                    <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="btn btn-outline" target="_blank">Get Started</a>
                 </div>
-
-                <div class="pricing-card standard">
-                <h3>Standard</h3>
-                <p class="price">KES 15,000</p>
-                <ul>
-                    <li>Up to 5 Pages</li>
-                    <li>Responsive + Modern UI</li>
-                    <li>Contact Form Integration</li>
-                    <li>Delivery: 5–7 Days</li>
-                </ul>
-                <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="whatsapp-link btn" target="_blank">Get Started</a>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">KES 15,000</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Up to 5 Pages</li>
+                        <li><i class="fa-solid fa-check"></i> Responsive + Modern UI</li>
+                        <li><i class="fa-solid fa-check"></i> Contact Form Integration</li>
+                        <li><i class="fa-solid fa-check"></i> Delivery: 5–7 Days</li>
+                    </ul>
+                    <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="btn btn-primary" target="_blank">Get Started</a>
                 </div>
-
-                <div class="pricing-card premium">
-                <h3>Premium</h3>
-                <p class="price">KES 25,000</p>
-                <ul>
-                    <li>Custom Business Website</li>
-                    <li>SEO Optimization</li>
-                    <li>Maintenance & Updates (1 Month)</li>
-                    <li>Delivery: 7–10 Days</li>
-                </ul>
-                <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="whatsapp-link btn" target="_blank">Get Started</a>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">KES 25,000</div>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Custom Business Website</li>
+                        <li><i class="fa-solid fa-check"></i> SEO Optimization</li>
+                        <li><i class="fa-solid fa-check"></i> 1 Month Maintenance</li>
+                        <li><i class="fa-solid fa-check"></i> Delivery: 7–10 Days</li>
+                    </ul>
+                    <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" class="btn btn-outline" target="_blank">Get Started</a>
                 </div>
             </div>
         </section>
-        <!--END OF PRICING SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--FAQ SECTION-->
+        <!-- FAQ -->
         <section class="faq" id="faq">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-
+            <p class="section-label center">FAQ</p>
+            <h2 class="section-title">Frequently Asked <span class="accent-text">Questions</span></h2>
             <div class="faq-container">
                 <div class="faq-item">
-                <h4>How long does a website take?</h4>
-                <p>Most projects take between 1–3 weeks depending on complexity.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>How long does a website take?</h4>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most projects take between 1–3 weeks depending on complexity and the package chosen.</p>
+                    </div>
                 </div>
-
                 <div class="faq-item">
-                <h4>Do you offer website maintenance?</h4>
-                <p>Yes, I provide ongoing maintenance and updates if needed.</p>
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Do you offer website maintenance?</h4>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide ongoing maintenance and updates. The Premium package includes 1 month free.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>What do I need to get started?</h4>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Just reach out via WhatsApp or the contact form! We'll discuss your goals and guide you from there.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Do you work with clients outside Kenya?</h4>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We work with clients remotely from anywhere in the world.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <!--END OF FAQ SECTION-->
 
-        <!------------------------------------------------------------------------------------------------------->
-
-        <!--CONTACT SECTION-->
-        <section id="contact">
-                <h2 id="contact-heading">Contact Us</h2>
-                <p>Reach out to discuss your UX/UI needs or to start a project. 
-                    We're here to help you create impactful digital experiences.</p>
-                    <form id="contact-form" action="https://formspree.io/f/xovgnrvn" method="POST">
-                        <label for="name">Name</label>
-                        <input id="name" type="text" required name="name">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" required name="email">
-                        <label for="message">Message</label>
-                        <textarea id="message" type="text" required name="message"></textarea>
-                        <button type="submit">Send</button>
-                    </form>
+        <!-- CTA BANNER -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Build Your Dream Website?</h2>
+                <p>Let's turn your vision into a high-performing digital experience.</p>
+                <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" target="_blank" class="btn btn-primary btn-lg">
+                    <i class="fa-brands fa-whatsapp"></i> Start Your Project Today
+                </a>
+            </div>
         </section>
-        <!--END OF FAQ SECTION-->
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+            <div class="contact-info">
+                <p class="section-label">GET IN TOUCH</p>
+                <h2>Let's <span class="accent-text">Talk</span></h2>
+                <p>Reach out to discuss your project or ask any questions. We're always happy to help.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+254 702 922 265</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@stechstudio</span>
+                    </div>
+                </div>
+            </div>
+            <form id="contact-form" action="https://formspree.io/f/xovgnrvn" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" required name="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">(required)</span></label>
+                    <input id="email" type="email" required name="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required name="message" placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
 
     </main>
-    <!--END OF MAIN SECTION-->
 
-    <!------------------------------------------------------------------------------------------------------->
-
-    <!--FOOTER SECTION-->
+    <!-- FOOTER -->
     <footer id="footer">
-        <div class="footer-icons">
-            <p>Contact Us</p>
-            <a href="https://www.instagram.com/stechstudio?igsh=b2liOGs3OGdobHB1" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61584559106548" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" target="_blank
-            "><i class="fab fa-whatsapp"></i></a>
+        <div class="footer-grid">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+                <div class="footer-logo">{S} Stech Studio</div>
+                <p>We design fast, strategic, and conversion-focused websites that help businesses grow online.</p>
+                <p class="footer-location"><i class="fa-solid fa-location-dot"></i> Nairobi, Kenya</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#services">Web Design</a></li>
+                    <li><a href="#services">Website Redesign</a></li>
+                    <li><a href="#services">SEO Optimization</a></li>
+                    <li><a href="#pricing">View Packages</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/stechstudio?igsh=b2liOGs3OGdobHB1" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61584559106548" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://wa.me/254702922265?text=Hello Stech Studio%20I'm%20interested%20in%20your%20services" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <p>&copy; <span id="year"></span> Stech Studio.<strong> | Empowering digital innovation.</strong></p>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Stech Studio. <strong>Empowering digital innovation.</strong></p>
+        </div>
     </footer>
-    <!--END OF FOOTER SECTION-->
-    
+
     <script src="script.js"></script>
 </body>
-
-
 </html>
